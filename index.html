@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <title>osu!works</title>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+            $.ajax('https://api.github.com/orgs/osuWorks/repos', {
+                success: function(data) {
+                    if (data.length < 1) {
+                        $('.repositories').html('<p class="info">There are no repositories.</p>');
+                    } else {
+                        $('.repositories').html(null);
+                        $.each(data, function(index, value) {
+                            $('.repositories').append('<a href="' + value.html_url + '" target="_blank" class="repository language-' + value.language + '"><span>' + value.name + '</span></a>');
+                        });
+                    }
+                },
+                error: function() {
+                    $('.repositories').html('<p class="error">An error occurred while loading repositories from github.com.</p>');
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="primary-nav">
+            <h1>osu! community development</h1>
+        </nav>
+
+        <div class="repositories">
+            Loading...
+        </div>
+
+        <footer>
+            <p>osu!works is a community-driven project for the game <a href="http://osu.ppy.sh/">osu!</a>. It does not
+                affiliate with ppy Pty Ltd in any way.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    background: #b17;
+    color: white;
+    font-family: "Arial Grande", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+a {
+    transition: color .5s;
+}
+
+.primary-nav {
+    text-align: center;
+}
+
+.repositories {
+    text-align: center;
+}
+
+.repositories .repository {
+    display: inline-block;
+    color: inherit;
+    border: 4px white solid;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    background: #222;
+    transition: background-color .5s;
+    margin: 5px;
+}
+
+.repositories .repository:hover {
+    background: #333;
+}
+
+.repositories .repository span {
+    font-size: .95em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.repositories .repository.language-Java {
+    background: #ffa748;
+}
+
+.repositories .repository.language-Java:hover {
+    background: #ffc44e;
+}
+
+.repositories .repository.language-HTML {
+    background: #1bb0ff;
+}
+
+.repositories .repository.language-HTML:hover {
+    background: #00d8ff;
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .95);
+}
+
+footer a:hover {
+    color: white;
+}
