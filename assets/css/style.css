@@ -61,11 +61,13 @@ a {
     background: #ffc44e;
 }
 
-.repositories .repository.language-HTML {
+.repositories .repository.language-HTML,
+.repositories .repository.language-CSS{
     background: #1bb0ff;
 }
 
-.repositories .repository.language-HTML:hover {
+.repositories .repository.language-HTML:hover,
+.repositories .repository.language-CSS:hover{
     background: #00d8ff;
 }
 
