@@ -1,5 +1,5 @@
 body {
-    background: #b17;
+    background: #323232;
     color: white;
     font-family: "Arial Grande", Tahoma, Helvetica, Arial, sans-serif;
 }
@@ -10,6 +10,15 @@ a {
 
 .primary-nav {
     text-align: center;
+    background: #b17;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.primary-nav h1 {
+    margin: 0;
+    font-size: 16pt;
 }
 
 .repositories {
